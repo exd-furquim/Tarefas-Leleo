@@ -1,0 +1,39 @@
+body{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    display: flex;
+    margin-left: 50px;
+}
+input,textarea{
+  border: pink;
+ background-color: pink;
+ border-style: none;
+}
+fieldset{
+    border: solid pink 2px;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: right;
+    color: #909;
+    border-bottom: solid #909 2px;
+}
+img{
+    float: left;
+}
+label{
+    display: inline-block;
+    width: 60px;
+}
+input[type = "text"],
+input[type = "password"],
+input[type = "email"],
+textarea {
+    width: 80%;
+}
+input[type = "submit"]{
+    width: 200px;
+}

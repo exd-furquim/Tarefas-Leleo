@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>𝐅𝟏 𝐅𝐎́𝐑𝐔𝐌</title>
+  <link rel="shortcut icon" href="pixil-frame-0_1.ico" type="image/x-icon">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(44, 44, 44);
+      background-image: url(photo-1671159593357-ee577a598f71.jpg);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-image: url(fundo-de-tela-larga-de-fibra-de-carbono-cenario-tecnologico-e-cientifico_91645-4.avif);
+      color: #5be6ff;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 4px solid #ff0000be;
+      border-top: 4px solid #ff0000be;
+    }
+
+    .logo {
+      margin-right: 2rem;
+      margin: 18px;
+    }
+
+    .navbar .nav-item {
+      position: relative;
+      margin-right: 1.5rem;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 1rem 0.5rem;
+      display: block;
+      background-color: #1a1a1a;
+      border-radius: 5px;
+    }
+
+    .nav-link:hover {
+      color: rgb(255, 0, 0);
+      background-color: #1a1a1a;
+      transform: scale(1.06);
+      box-shadow: 8px 8px 8px rgba(134, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1a1a1a;
+      min-width: 180px;
+      z-index: 1;
+      border: 1px solid #ff000030;
+    }
+
+    .dropdown a {
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #1a1a1a;
+      color: rgb(255, 0, 0);
+      transform: scale(1.1);
+      box-shadow: 8px 8px 8px rgba(134, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .conteudo-lateral {
+      display: flex;
+      gap: 20px;
+      padding: 30px 10px 10px 250px;
+    }
+
+    /* CARROSSEL AJUSTADO */
+    .carousel-container {
+      box-shadow: 8px 8px 8px rgba(134, 0, 0, 0.4);
+      position: relative;
+      width: 28%;
+      max-width: 900px;
+      overflow: hidden;
+      border: 2px solid red;
+      border-radius: 10px;
+      background-color: #2c2c2c;
+      padding: 0;
+      margin: 0;
+      height: 300px; /* Define a altura visível do carrossel */
+      background-image: url(fundo-de-tela-larga-de-fibra-de-carbono-cenario-tecnologico-e-cientifico_91645-4.avif);
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+      padding: 0;
+      margin: 0;
+      height: 100%; /* Garante que o conteúdo ocupe toda a altura do container */
+      background-image: url(fundo-de-tela-larga-de-fibra-de-carbono-cenario-tecnologico-e-cientifico_91645-4.avif);
+    }
+
+    .news-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      color: white;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      height: 100%; /* Ocupa 100% da altura do carrossel */
+    }
+
+    .news-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Preenche toda a área cortando a imagem se necessário */
+      display: block;
+      border-bottom: 3px solid red;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .arrow {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      
+    }
+
+    .arrow:hover {
+      background-color: red;
+    }
+
+    /* BLOCO DE TEXTO LATERAL */
+    .outra-secao {
+      width: 55%;
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid red;
+      color: white;
+      box-shadow: 8px 8px 8px rgba(134, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-image: url(photo-1671159593357-ee577a598f71.jpg);
+    }
+
+    .outra-secao.visible {
+      opacity: 1;
+    }
+
+    .outra-secao h2 {
+      color: #ff5555;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="f1logo1-removebg-preview.png" width="250" height="135" />
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Dashboard</a>
+      <div class="dropdown">
+        <a href="index2.html">Resumo</a>
+        <a href="#">Estatísticas</a>
+        <a href="#">Resultado GP</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Pilotos</a>
+      <div class="dropdown">
+        <a href="#">Champions Drivers</a>
+        <a href="#">Todos</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Provas</a>
+      <div class="dropdown">
+        <a href="#">Calendário</a>
+        <a href="#">Resultados</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="conteudo-lateral">
+    <!-- CARROSSEL -->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="news-item">
+          <img src="leclerc.png" alt="Notícia 1" />
+        </div>
+        <div class="news-item">
+          <img src="Austria_Circuit.avif" alt="Notícia 2" />
+        </div>
+        <div class="news-item">
+          <img src="russell.png" alt="Notícia 3" />
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="arrow" onclick="moveSlide(-1)">&#8592;</button>
+        <button class="arrow" onclick="moveSlide(1)">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- BLOCO DE TEXTO QUE MUDA COM O SLIDE -->
+    <div class="outra-secao visible" id="side-content"></div>
+  </div>
+
+
+  <!-- SCRIPT DO CARROSSEL -->
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const totalSlides = document.querySelectorAll(".news-item").length;
+    const side = document.getElementById("side-content");
+
+    const sideContents = [
+      {
+        title: "Leclerc vence!",
+        text: "Leclerc brilha em Silverstone e conquista a vitória sobre Norris em uma disputa emocionante.",
+        list: ["Pódio: Leclerc, Norris, Hamilton", "Ferrari sobe no campeonato", "McLaren surpreende"],
+      },
+      {
+        title: "Confusão na Áustria",
+        text: "Um acidente na primeira curva muda o destino da corrida no Red Bull Ring.",
+        list: ["3 pilotos fora na primeira volta", "Safety car por 5 voltas", "Alonso avança posições"],
+      },
+      {
+        title: "Russell no pódio",
+        text: "George Russell garante 3º lugar no GP do Canadá e anima a equipe Mercedes.",
+        list: ["Desempenho consistente", "Nova atualização aerodinâmica", "Pontos valiosos"],
+      },
+    ];
+
+    function updateSideContent(index) {
+      side.classList.remove("visible");
+      setTimeout(() => {
+        const content = sideContents[index];
+        side.innerHTML = `
+          <h2>${content.title}</h2>
+          <p>${content.text}</p>
+          <ul>${content.list.map((item) => `<li>${item}</li>`).join("")}</ul>
+        `;
+        side.classList.add("visible");
+      }, 200);
+    }
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+      updateSideContent(currentIndex);
+    }
+
+    window.onload = () => {
+      updateSideContent(0);
+    };
+  </script>
+  
+</body>
+
+</html>

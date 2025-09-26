@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    margin-left: 50px;
+}
+h1{
+    text-align: right;
+    border-bottom:  solid rgb(137, 0, 179);;
+    color: rgb(137, 0, 179);
+}
+textarea{
+    background-color: pink;
+}
+fieldset{
+    border: solid pink;
+}
+body{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+input,
+textarea {
+    background-color: pink;
+    border: none;
+}
+input[type = "text"]
+input[type = "password"]
+input[type = "email"]
+textarea{
+    width: 80%;
+}
+input[type="submit"]{
+    width: 200px;
+}
+img{
+    float: left;
+}
+label{
+    display: inline-block;
+    width: 60px;
+}

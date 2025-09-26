@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Idade de Cachorro</title>
+  <style>
+ 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ff4343;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      margin-top: 10px;
+      cursor: pointer;
+    }  
+ 
+    button:hover {
+      background-color: #45a049;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <h1>🐾 Calculadora de Idade de Cachorro 🐾</h1>
+  <input type="number" id="idadeCachorro" placeholder="Digite a idade do cachorro">
+  <br>
+  <button onclick="calcularIdade()">Calcular</button>
+  <p id="resultado"></p>  
+ 
+  <script>
+    function calcularIdade() {
+      let idade = document.getElementById("idadeCachorro").value;
+      let resultado = document.getElementById("resultado");
+      let idadeHumana = idade * 7;
+      resultado.innerText = `A idade equivalente em anos humanos é: ${idadeHumana} anos.`;
+    }
+  </script>
+ 
+</body>
+</html>

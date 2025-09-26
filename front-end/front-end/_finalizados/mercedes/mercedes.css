@@ -1,0 +1,16 @@
+body{
+  background-color: rgb(155, 155, 155);
+}
+hr {
+    height: 5px;
+    background-color: rgb(98, 165, 165);
+    border: solid black;
+}
+
+.container{
+  display: flex;
+}
+
+img{
+    border-radius: 100px;
+}
